@@ -1,0 +1,24 @@
+{
+  "name": "chat-mqtt",
+  "version": "1.0.0",
+  "description": "chat entre um ou mais usuarios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emiliwillinghoefer/Chat-MQTT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emiliwillinghoefer/Chat-MQTT/issues"
+  },
+  "homepage": "https://github.com/Emiliwillinghoefer/Chat-MQTT#readme",
+  "dependencies": {
+    "request": "^2.88.2",
+    "threads": "^1.7.0",
+    "tiny-worker": "^2.3.0"
+  }
+}
