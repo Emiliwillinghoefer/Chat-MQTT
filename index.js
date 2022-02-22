@@ -4,7 +4,7 @@ const mqtt = require('mqtt')
 const mosca = require('mosca')
 
 const settings = {
-    port:3000
+    port:1883
 }
 const server = new mosca.Server(settings); //ouve a porta setada
 
