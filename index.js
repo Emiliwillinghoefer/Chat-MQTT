@@ -1,9 +1,44 @@
-const user = require('./models/user');
-class Chat{
-    
+const express = require('express')
+const user = require('./models/user')
+const mqtt = require('mqtt')
+const mosca = require('mosca')
+
+const settings = {
+    port:3000
 }
-console.log('1 - Iniciar uma nova conversa')
-console.log('2 - Onlines')
+const server = new mosca.Server(settings); //ouve a porta setada
+
+const app = express()
+
+app.use(express)
+
+
+
+const client  = mqtt.connect('mqtt://localhost:1883');
+
+
+
+client.on('connect', function () {
+    console.log("Server is Running")
+    client.subscribe('chat')
+})
+
+    client.on('close', () => {
+        console.log('Chat Server closed');
+    });
+
+    // setInterval(function() {
+    //     client.publish('X_Y_topic', 'Hello mqtt');
+    //     console.log('Message Sent');
+    //     context = message.toString();
+    //     console.log(context)
+    // }, 5000);
+
+
+class Chat{
+        
+}
+
 
 module.exports = Chat;
 
