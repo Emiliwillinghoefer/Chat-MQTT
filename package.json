@@ -1,29 +1,23 @@
 {
-  "name": "chat-mqtt",
+  "name": "mqttchat",
   "version": "1.0.0",
-  "description": "chat entre um ou mais usuarios",
+  "description": "\"Chat using MQTT protocol\"",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "start"
+    "start": "nodemon app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Emiliwillinghoefer/Chat-MQTT.git"
-  },
-  "author": "",
+  "author": "\"Emili Willinghoefer e Kellane Lopes\"]",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Emiliwillinghoefer/Chat-MQTT/issues"
-  },
-  "homepage": "https://github.com/Emiliwillinghoefer/Chat-MQTT#readme",
   "dependencies": {
-    "express": "^4.17.2",
-    "mosca": "^2.8.3",
-    "mqtt": "^4.3.5",
-    "nodemon": "^2.0.15",
-    "request": "^2.88.2",
-    "threads": "^1.7.0",
-    "tiny-worker": "^2.3.0"
+    "aedes": "^0.46.3",
+    "express": "^4.17.3",
+    "mqtt": "^4.3.6",
+    "paho": "^1.0.0",
+    "paho-mqtt": "^1.1.0",
+    "ws": "^8.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
